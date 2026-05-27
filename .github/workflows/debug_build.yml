@@ -4,10 +4,13 @@ on:
   push:
     branches:
       - master
+      - monet-modernize
       - 'github-releases/**'
   pull_request:
     branches:
       - master
+      - monet-modernize
+  workflow_dispatch:
 
 jobs:
   build:
