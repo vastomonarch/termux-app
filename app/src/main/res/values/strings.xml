@@ -57,6 +57,8 @@
     <string name="msg_enabling_terminal_toolbar">Enabling Terminal Toolbar</string>
     <string name="msg_disabling_terminal_toolbar">Disabling Terminal Toolbar</string>
 
+    <string name="extra_keys_command_hint">Insert command…</string>
+
 
 
     <!-- Terminal Popup -->
@@ -234,5 +236,48 @@
 
     <!-- Donate Preference -->
     <string name="donate_preference_title">Donate</string>
+
+    <!-- Termux:Styling App Preferences -->
+    <string name="termux_style_preferences_title">&amp;TERMUX_APP_NAME; Appearance</string>
+    <string name="termux_style_preferences_summary">Preferences for &amp;TERMUX_APP_NAME; appearance and customisation</string>
+
+
+    <!-- Background Image Preferences -->
+    <string name="termux_background_header">Background</string>
+    <string name="termux_background_image_enabled_title">Display background image</string>
+    <string name="termux_background_image_enabled_off">Background image will be disabled.</string>
+    <string name="termux_background_image_enabled_on">Background image will be enabled.</string>
+
+
+    <!-- Extra Keys Preferences -->
+    <string name="termux_extrakeys_header">Extra Keys</string>
+    <string name="termux_extrakeys_blur_enabled_title">Extra Keys Blurred Background</string>
+    <string name="termux_extrakeys_blur_enabled_off">Extra Keys Blurred Background will be disabled.</string>
+    <string name="termux_extrakeys_blur_enabled_on">ExtraKeys Blurred Background will be enabled.</string>
+
+
+    <!-- Sessions Menu Preferences -->
+    <string name="termux_sessions_header">Sessions Menu</string>
+    <string name="termux_sessions_blur_enabled_title">Sessions Blurred Background</string>
+    <string name="termux_sessions_blur_enabled_off">Sessions Blurred Background will be disabled.</string>
+    <string name="termux_sessions_blur_enabled_on">Sessions Blurred Background will be enabled.</string>
+
+
+    <!-- Monet Background (Unstable) -->
+    <string name="termux_monet_background_enabled_title">Monet Background (Unstable)</string>
+    <string name="termux_monet_background_enabled_off">Terminal Monet Background will be disabled.</string>
+    <string name="termux_monet_background_enabled_on">Monet Background will be enabled.</string>
+
+
+    <!-- Terminal View Activity Remove -->
+    <string name="termux_terminal_view_activity_remove_title">Prevent from remaining on recent apps</string>
+    <string name="termux_terminal_view_activity_remove_off">Once closed all terminal sessions, &amp;TERMUX_APP_NAME; will close and remain visible in recent apps.</string>
+    <string name="termux_terminal_view_activity_remove_on">&amp;TERMUX_APP_NAME; will close and remove itself from recent apps if there are no active terminal sessions. (Default)</string>
+
+
+    <!-- Termux:GUI App Preferences -->
+    <string name="termux_gui_preferences_title">&amp;TERMUX_GUI_APP_NAME;</string>
+    <string name="termux_gui_preferences_summary">Preferences for &amp;TERMUX_GUI_APP_NAME; app</string>
+
 
 </resources>
