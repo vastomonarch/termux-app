@@ -442,6 +442,19 @@ public final class TermuxConstants {
     public static final String TERMUX_WIDGET_GITHUB_ISSUES_REPO_URL = TERMUX_WIDGET_GITHUB_REPO_URL + "/issues"; // Default: "https://github.com/termux/termux-widget/issues"
     /** Termux:Widget F-Droid package url */
     public static final String TERMUX_WIDGET_FDROID_PACKAGE_URL = FDROID_PACKAGES_BASE_URL + "/" + TERMUX_WIDGET_PACKAGE_NAME; // Default: "https://f-droid.org/en/packages/com.termux.widget"
+    /** Termux:GUI app name */
+    public static final String TERMUX_GUI_APP_NAME = "Termux:GUI"; // Default: "Termux:GUI"
+    /** Termux:GUI app package name */
+    public static final String TERMUX_GUI_PACKAGE_NAME = TERMUX_PACKAGE_NAME + ".gui"; // Default: "com.termux.gui"
+    /** Termux:GUI GitHub repo name */
+    public static final String TERMUX_GUI_GITHUB_REPO_NAME = "termux-gui"; // Default: "termux-gui"
+    /** Termux:GUI GitHub repo url */
+    public static final String TERMUX_GUI_GITHUB_REPO_URL = TERMUX_GITHUB_ORGANIZATION_URL + "/" + TERMUX_GUI_GITHUB_REPO_NAME; // Default: "https://github.com/termux/termux-gui"
+    /** Termux:GUI GitHub issues repo url */
+    public static final String TERMUX_GUI_GITHUB_ISSUES_REPO_URL = TERMUX_GUI_GITHUB_REPO_URL + "/issues"; // Default: "https://github.com/termux/termux-gui/issues"
+    /** Termux:GUI F-Droid package url */
+    public static final String TERMUX_GUI_FDROID_PACKAGE_URL = FDROID_PACKAGES_BASE_URL + "/" + TERMUX_GUI_PACKAGE_NAME; // Default: "https://f-droid.org/en/packages/com.termux.gui"
+
 
 
 
@@ -457,7 +470,8 @@ public final class TermuxConstants {
         TERMUX_FLOAT_APP_NAME,
         TERMUX_STYLING_APP_NAME,
         TERMUX_TASKER_APP_NAME,
-        TERMUX_WIDGET_APP_NAME);
+        TERMUX_WIDGET_APP_NAME,
+        TERMUX_GUI_APP_NAME);
 
     public static final List<String> TERMUX_PLUGIN_APP_PACKAGE_NAMES_LIST = Arrays.asList(
         TERMUX_API_PACKAGE_NAME,
@@ -465,7 +479,8 @@ public final class TermuxConstants {
         TERMUX_FLOAT_PACKAGE_NAME,
         TERMUX_STYLING_PACKAGE_NAME,
         TERMUX_TASKER_PACKAGE_NAME,
-        TERMUX_WIDGET_PACKAGE_NAME);
+        TERMUX_WIDGET_PACKAGE_NAME,
+        TERMUX_GUI_PACKAGE_NAME);
 
 
 
@@ -731,6 +746,34 @@ public final class TermuxConstants {
     public static final String TERMUX_PROPERTIES_SECONDARY_FILE_PATH = TERMUX_CONFIG_HOME_DIR_PATH + "/termux.properties"; // Default: "/data/data/com.termux/files/home/.config/termux/termux.properties"
     /** Termux app properties secondary file */
     public static final File TERMUX_PROPERTIES_SECONDARY_FILE = new File(TERMUX_PROPERTIES_SECONDARY_FILE_PATH);
+    /** Termux app background directory path */
+    // Default: "/data/data/com.termux/files/home/.termux/background"
+    public static final String TERMUX_BACKGROUND_DIR_PATH = TERMUX_DATA_HOME_DIR_PATH + "/background";
+
+    /** Termux app background directory */
+    public static final File TERMUX_BACKGROUND_DIR = new File(TERMUX_BACKGROUND_DIR_PATH);
+
+    /** Termux app background original image file path */
+    // Default: "/data/data/com.termux/files/home/.termux/background/background.jpeg"
+    public static final String TERMUX_BACKGROUND_IMAGE_PATH = TERMUX_BACKGROUND_DIR_PATH + "/background.jpeg";
+
+    /** Termux app background original image file */
+    public static final File TERMUX_BACKGROUND_IMAGE_FILE = new File(TERMUX_BACKGROUND_IMAGE_PATH);
+
+    /** Termux app background optimized portrait image file path */
+    // Default: "/data/data/com.termux/files/home/.termux/background/background_portrait.jpeg"
+    public static final String TERMUX_BACKGROUND_IMAGE_PORTRAIT_PATH = TERMUX_BACKGROUND_DIR_PATH + "/background_portrait.jpeg";
+
+    /** Termux app background optimized portrait image file */
+    public static final File TERMUX_BACKGROUND_IMAGE_PORTRAIT_FILE = new File(TERMUX_BACKGROUND_IMAGE_PORTRAIT_PATH);
+
+    /** Termux app background optimized landscape image file path */
+    // Default: "/data/data/com.termux/files/home/.termux/background/background_landscape.jpeg"
+    public static final String TERMUX_BACKGROUND_IMAGE_LANDSCAPE_PATH = TERMUX_BACKGROUND_DIR_PATH + "/background_landscape.jpeg";
+
+    /** Termux app background optimized landscape image file */
+    public static final File TERMUX_BACKGROUND_IMAGE_LANDSCAPE_FILE = new File(TERMUX_BACKGROUND_IMAGE_LANDSCAPE_PATH);
+
 
     /** Termux app properties file paths list. **DO NOT** allow these files to be modified by
      * {@link android.content.ContentProvider} exposed to external apps, since they may silently
@@ -1332,6 +1375,34 @@ public final class TermuxConstants {
             public static final String EXTRA_FILE_CLICKED = TERMUX_WIDGET_PACKAGE_NAME + ".EXTRA_FILE_CLICKED"; // Default: "com.termux.widget.EXTRA_FILE_CLICKED"
 
         }
+
+    }
+
+
+    /**
+     * Termux:GUI app constants.
+     */
+    public static final class TERMUX_GUI_APP {
+
+        /** Termux:GUI app main activity name. */
+        public static final String TERMUX_GUI_MAIN_ACTIVITY_NAME = TERMUX_GUI_PACKAGE_NAME + ".activities.TermuxGUIMainActivity"; // Default: "com.termux.gui.activities.TermuxGUIMainActivity"
+
+        /** Termux:GUI app launcher activity name. This is an `activity-alias` for {@link #TERMUX_GUI_MAIN_ACTIVITY_NAME} used for launchers with {@link Intent#CATEGORY_LAUNCHER}. */
+        public static final String TERMUX_GUI_LAUNCHER_ACTIVITY_NAME = TERMUX_GUI_PACKAGE_NAME + ".activities.TermuxGUILauncherActivity"; // Default: "com.termux.gui.activities.TermuxGUILauncherActivity"
+
+    }
+
+
+    /**
+     * Termux:GUI app constants.
+     */
+    public static final class TERMUX_GUI_APP {
+
+        /** Termux:GUI app main activity name. */
+        public static final String TERMUX_GUI_MAIN_ACTIVITY_NAME = TERMUX_GUI_PACKAGE_NAME + ".activities.TermuxGUIMainActivity"; // Default: "com.termux.gui.activities.TermuxGUIMainActivity"
+
+        /** Termux:GUI app launcher activity name. This is an `activity-alias` for {@link #TERMUX_GUI_MAIN_ACTIVITY_NAME} used for launchers with {@link Intent#CATEGORY_LAUNCHER}. */
+        public static final String TERMUX_GUI_LAUNCHER_ACTIVITY_NAME = TERMUX_GUI_PACKAGE_NAME + ".activities.TermuxGUILauncherActivity"; // Default: "com.termux.gui.activities.TermuxGUILauncherActivity"
 
     }
 
