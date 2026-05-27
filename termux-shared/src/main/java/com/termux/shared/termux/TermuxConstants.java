@@ -431,7 +431,41 @@ public final class TermuxConstants {
 
 
     /** Termux:Widget app name */
-    public static final String TERMUX_WIDGET_APP_NAME = "Termux:Widget"; // Default: "Termux:Widget"
+
+    /**
+     * Termux:GUI app constants.
+     */
+    public static final class TERMUX_GUI_APP {
+
+        /** Termux:GUI app main activity name. */
+        public static final String TERMUX_GUI_MAIN_ACTIVITY_NAME = TERMUX_GUI_PACKAGE_NAME + ".activities.TermuxGUIMainActivity"; // Default: "com.termux.gui.activities.TermuxGUIMainActivity"
+
+        /** Termux:GUI app launcher activity name. This is an  for {@link #TERMUX_GUI_MAIN_ACTIVITY_NAME} used for launchers with {@link Intent#CATEGORY_LAUNCHER}. */
+        public static final String TERMUX_GUI_LAUNCHER_ACTIVITY_NAME = TERMUX_GUI_PACKAGE_NAME + ".activities.TermuxGUILauncherActivity"; // Default: "com.termux.gui.activities.TermuxGUILauncherActivity"
+
+    }
+
+
+
+    public static final String TERMUX_WIDGET_APP_NAME = "Termux:Widget";
+
+    /**
+     * Termux:GUI app name
+     */
+    // Default: "Termux:GUI"
+    public static final String TERMUX_GUI_APP_NAME = "Termux:GUI";
+
+    /**
+     * Termux:GUI app package name
+     */
+    // Default: "com.termux.gui"
+    public static final String TERMUX_GUI_PACKAGE_NAME = TERMUX_PACKAGE_NAME + ".gui";
+
+    /**
+     * Termux:GUI app preferences file name
+     */
+    // Default: "com.termux.gui_preferences"
+    public static final String TERMUX_GUI_DEFAULT_PREFERENCES_FILE_BASENAME_WITHOUT_EXTENSION = TERMUX_GUI_PACKAGE_NAME + "_preferences"; // Default: "Termux:Widget"
     /** Termux:Widget app package name */
     public static final String TERMUX_WIDGET_PACKAGE_NAME = TERMUX_PACKAGE_NAME + ".widget"; // Default: "com.termux.widget"
     /** Termux:Widget GitHub repo name */
@@ -1259,6 +1293,17 @@ public final class TermuxConstants {
 
 
 
+
+
+    /**
+     * Termux:Styling app constants.
+     */
+    /**
+     * Termux:Background app constants.
+     */
+    public static final class TERMUX_BACKGROUND {
+
+    }
 
 
     /**
