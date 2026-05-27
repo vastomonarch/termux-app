@@ -43,6 +43,11 @@ public final class TextStyle {
     /** The 256 standard color entries and the three special (foreground, background and cursor) ones. */
     public final static int NUM_INDEXED_COLORS = 259;
 
+    /**
+     * If true, character represents a bitmap slice, not text.
+     */
+    public final static int BITMAP = 1 << 15;
+
     /** Normal foreground and background colors and no effects. */
     final static long NORMAL = encode(COLOR_INDEX_FOREGROUND, COLOR_INDEX_BACKGROUND, 0);
 
@@ -85,6 +90,22 @@ public final class TextStyle {
 
     public static int decodeEffect(long style) {
         return (int) (style & 0b11111111111);
+    }
+
+    public static long encodeBitmap(int num, int X, int Y) {
+        return ((long) num << 16) | ((long) Y << 32) | ((long) X << 48) | BITMAP;
+    }
+
+    public static int bitmapNum(long style) {
+        return (int) ((style & 0x0000FFFF00000000L) >>> 32);
+    }
+
+    public static int bitmapX(long style) {
+        return (int) ((style & 0xFFFF000000000000L) >>> 48);
+    }
+
+    public static int bitmapY(long style) {
+        return (int) ((style & 0x00000000FFFF0000L) >>> 16);
     }
 
 }
