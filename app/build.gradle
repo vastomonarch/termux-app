@@ -38,6 +38,7 @@ android {
 
         implementation project(":terminal-view")
         implementation project(":termux-shared")
+    implementation "com.github.misakmanukyan:RealtimeBlurView_v2:80d9939272"
     }
 
     defaultConfig {
