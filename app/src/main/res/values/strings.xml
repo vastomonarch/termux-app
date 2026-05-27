@@ -280,4 +280,17 @@
     <string name="termux_gui_preferences_summary">Preferences for &amp;TERMUX_GUI_APP_NAME; app</string>
 
 
+
+    <!-- Background Image Error Messages -->
+    <string name="error_background_image_loading_failed">Background image loading failed</string>
+    <string name="error_background_image_loading_from_gallery_failed">Background image loading from gallery failed.</string>
+    <string name="title_restore_background_image">Restore default background image</string>
+    <string name="action_no">No</string>
+
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
 </resources>
